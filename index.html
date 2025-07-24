@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header>
+        <div class="branding">
+            <img src="./LOGO.png" alt="Boutique Logo" class="logo">
+            <h1>RICH FASHION.COM</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#cart">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section id="home" class="hero">
+        <img src="./Gallery/BWSHORT.jpg" alt="Seasonal Collection" class="hero-img">
+        <div class="hero-content">
+            <h2>Discover the Latest Fashion</h2>
+            <p>Elegant styles for every season</p>
+        </div>
+    </section>
+
+    <!-- Search Bar -->
+    <section class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search for products...">
+        <button id="searchBtn">Search</button>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="shop" class="products">
+        <h2>Featured Products</h2>
+        <div class="filters">
+            <select id="categoryFilter">
+                <option value="">All Categories</option>
+                <option value="dresses">Dresses</option>
+                <option value="shoes">Shoes</option>
+                <option value="accessories">Accessories</option>
+            </select>
+            <select id="priceFilter">
+                <option value="">All Prices</option>
+                <option value="0-100">GHS 0 - 100</option>
+                <option value="101-250">GHS 101 - 250</option>
+                <option value="251-500">GHS 251 - 500</option>
+            </select>
+        </div>
+        <div id="productList" class="product-list">
+            <!-- Product cards will be injected here by JS -->
+        </div>
+    </section>
+
+    <!-- Cart Page -->
+    <section id="cart" class="cart">
+        <h2>Your Cart</h2>
+        <div id="cartItems">
+            <!-- Cart items will be injected here by JS -->
+        </div>
+        <div class="cart-summary">
+            <span>Total: GHS <span id="cartTotal">0.00</span></span>
+            <button id="checkoutBtn">Proceed to Checkout</button>
+        </div>
+    </section>
+
+    <!-- Checkout Page -->
+    <section id="checkout" class="checkout">
+        <h2>Checkout</h2>
+        <form id="checkoutForm">
+            <input type="text" name="fullname" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="address" placeholder="Postal Address" required>
+            <select name="payment" required>
+                <option value="">Select Payment Method</option>
+                <option value="cod">Cash on Delivery</option>
+                <option value="card">Card Payment</option>
+            </select>
+            <button type="submit">Place Order</button>
+        </form>
+    </section>
+
+    <!-- Order Confirmation --> 
+    <section id="order-confirmation" class="order-confirmation">
+        <h2>Order Confirmed!</h2>
+        <div id="orderSummary">
+            <!-- Order summary will be injected here by JS -->
+        </div>
+        <p>Estimated delivery: 3-5 business days.</p>
+        <button onclick="window.print()">Print Receipt</button>
+        <a href="#shop">Return to Shop</a>
+    </section>
+
+    <!-- About Page -->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>Welcome to Boutique! Our story began with a passion for fashion and a mission to bring elegant styles to everyone. Meet our team:</p>
+        <div class="team-photos">
+            <img src="Akua.jpg" alt="Team Member 1">
+            <img src="Madam Akua.jpg" alt="Team Member 2">
+        </div>
+        <p>Our mission: To inspire confidence and style in every customer.</p>
+    </section>
+
+    <!-- Contact Page -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+       
+    </section>
+
+    <!-- Footer -->
+    <footer>
+         <div class="contact-info">
+            <p>Phone: +233 25 721 6378</p>
+            <p>Email: info@richfachion.com</p>
+            <p>Location: Accra, Ghana</p>
+        </div>
+        <p>&copy; 2025 RichFashion. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
